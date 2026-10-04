@@ -1,0 +1,118 @@
+<!doctype html>
+<html lang="id">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Cek DPT Online - Desa Belik 2026</title>
+<meta name="description" content="Cek Daftar Pemilih Desa Belik Tahun 2026 berdasarkan Nama Lengkap">
+<style>
+*{box-sizing:border-box}
+body{margin:0;font-family:Arial,Helvetica,sans-serif;background:#f4f7fb;color:#172033}
+.wrap{max-width:720px;margin:0 auto;padding:24px 16px 40px}
+.card{background:#fff;border-radius:18px;box-shadow:0 8px 30px rgba(0,0,0,.08);padding:24px}
+.header{text-align:center;margin-bottom:22px}
+.badge{display:inline-block;background:#eaf2ff;color:#1757b8;border-radius:999px;padding:7px 12px;font-size:12px;font-weight:700}
+h1{font-size:28px;margin:12px 0 6px}
+.sub{color:#667085;margin:0}
+.search{display:flex;gap:10px;margin:22px 0 8px}
+input{flex:1;padding:15px 16px;border:1px solid #d0d5dd;border-radius:12px;font-size:16px;outline:none}
+input:focus{border-color:#1757b8;box-shadow:0 0 0 3px rgba(23,87,184,.1)}
+button{border:0;background:#1757b8;color:#fff;padding:0 20px;border-radius:12px;font-size:16px;font-weight:700;cursor:pointer}
+button:hover{filter:brightness(.95)}
+.hint{font-size:13px;color:#667085;margin:8px 2px 20px}
+.status{font-size:14px;margin:12px 0;color:#475467}
+.result{border:1px solid #e4e7ec;border-radius:14px;padding:17px;margin-top:12px;background:#fff}
+.name{font-size:19px;font-weight:800;margin-bottom:12px}
+.grid{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+.item{background:#f8fafc;border-radius:10px;padding:10px 12px}
+.label{font-size:11px;color:#667085;text-transform:uppercase;font-weight:700}
+.value{margin-top:4px;font-weight:700}
+.empty{text-align:center;padding:28px 10px;color:#667085}
+.footer{text-align:center;color:#98a2b3;font-size:12px;margin-top:18px}
+@media(max-width:520px){
+ .card{padding:18px}
+ h1{font-size:24px}
+ .search{flex-direction:column}
+ button{height:50px}
+ .grid{grid-template-columns:1fr}
+}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <div class="card">
+    <div class="header">
+      <span class="badge">PEMILIHAN KEPALA DESA BELIK</span>
+      <h1>CEK DPT ONLINE</h1>
+      <p class="sub">Desa Belik Tahun 2026</p>
+    </div>
+
+    <div class="search">
+      <input id="nama" type="search" placeholder="Masukkan NAMA LENGKAP..." autocomplete="off">
+      <button onclick="cari()">CARI</button>
+    </div>
+    <div class="hint">Pencarian berdasarkan <b>Nama Lengkap</b>. Ketik minimal 2 huruf.</div>
+    <div id="status" class="status"></div>
+    <div id="hasil"></div>
+
+    <div class="footer">Informasi ini digunakan untuk membantu pengecekan data pemilih.</div>
+  </div>
+</div>
+
+<script src="data.js"></script>
+<script>
+const input = document.getElementById("nama");
+const hasil = document.getElementById("hasil");
+const statusEl = document.getElementById("status");
+
+function esc(v){
+  return String(v ?? "").replace(/[&<>"']/g, c => ({
+    "&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#039;"
+  }[c]));
+}
+
+function cari(){
+  const q = input.value.trim().toUpperCase();
+  hasil.innerHTML = "";
+  if(q.length < 2){
+    statusEl.textContent = "Silakan masukkan minimal 2 huruf nama.";
+    return;
+  }
+
+  const matches = DPT_DATA.filter(x => x.nama.toUpperCase().includes(q));
+
+  statusEl.textContent = matches.length
+    ? `Ditemukan ${matches.length} data.`
+    : "Data dengan nama tersebut tidak ditemukan.";
+
+  if(!matches.length){
+    hasil.innerHTML = '<div class="empty">Nama tidak ditemukan dalam data yang tersedia.</div>';
+    return;
+  }
+
+  hasil.innerHTML = matches.slice(0,50).map(x => `
+    <div class="result">
+      <div class="name">${esc(x.nama)}</div>
+      <div class="grid">
+        <div class="item"><div class="label">TPS</div><div class="value">${esc(x.tps) || "-"}</div></div>
+        <div class="item"><div class="label">Dusun</div><div class="value">${esc(x.dusun) || "-"}</div></div>
+        <div class="item"><div class="label">RT</div><div class="value">${esc(x.rt) || "-"}</div></div>
+        <div class="item"><div class="label">RW</div><div class="value">${esc(x.rw) || "-"}</div></div>
+      </div>
+    </div>
+  `).join("");
+
+  if(matches.length > 50){
+    hasil.innerHTML += '<div class="hint">Menampilkan 50 hasil pertama. Perjelas nama untuk hasil yang lebih spesifik.</div>';
+  }
+}
+
+input.addEventListener("keydown", e => {
+  if(e.key === "Enter") cari();
+});
+input.addEventListener("input", () => {
+  if(input.value.trim().length >= 2) cari();
+});
+</script>
+</body>
+</html>
