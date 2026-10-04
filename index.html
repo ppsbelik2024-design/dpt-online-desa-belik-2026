@@ -6,6 +6,8 @@
 <title>Cek DPT Online | Desa Belik 2026</title>
 <meta name="description" content="Layanan pengecekan data pemilih Desa Belik untuk Pemilihan Kepala Desa Tahun 2026 berdasarkan nama lengkap.">
 <meta name="theme-color" content="#0b3b82">
+<meta property="og:title" content="CEK DPT ONLINE - Desa Belik 2026">
+<meta property="og:description" content="Cek data pemilih Desa Belik untuk Pemilihan Kepala Desa Tahun 2026.">
 <style>
 *{box-sizing:border-box}
 :root{
@@ -42,7 +44,7 @@ body{
   border-radius:999px;padding:7px 12px;font-size:11px;font-weight:800;letter-spacing:.4px
 }
 .dot{width:7px;height:7px;border-radius:50%;background:var(--gold)}
-.hero h1{font-size:30px;line-height:1.12;margin:16px 0 7px;letter-spacing:-.5px}
+.hero-top{display:flex;align-items:center;gap:18px;position:relative;z-index:1}.hero-logo{width:78px;height:78px;object-fit:contain;background:#fff;border-radius:16px;padding:5px;flex:none}.hero-copy{min-width:0}.hero h1{font-size:30px;line-height:1.12;margin:16px 0 7px;letter-spacing:-.5px}
 .hero p{margin:0;color:#dbeafe;font-size:14px;line-height:1.6}
 .card{
   background:var(--white);border:1px solid rgba(16,24,40,.06);
@@ -87,6 +89,7 @@ input:focus{border-color:var(--blue2);box-shadow:0 0 0 4px rgba(23,105,194,.11)}
 .info b{color:var(--ink)}
 .footer{text-align:center;color:#98a2b3;font-size:11px;line-height:1.6;margin-top:18px}
 @media(max-width:560px){
+  .hero-top{gap:12px}.hero-logo{width:64px;height:64px}.hero h1{font-size:23px}
   .wrap{padding:12px 10px 34px}
   .hero{border-radius:20px;padding:24px 18px}
   .hero h1{font-size:25px}
@@ -102,12 +105,25 @@ input:focus{border-color:var(--blue2);box-shadow:0 0 0 4px rgba(23,105,194,.11)}
 <body>
 <div class="wrap">
   <section class="hero">
-    <span class="badge"><span class="dot"></span> PANITIA PEMILIHAN KEPALA DESA</span>
-    <h1>CEK DPT ONLINE</h1>
-    <p>Desa Belik · Tahun 2026</p>
+    <div class="hero-top">
+      <img class="hero-logo" src="logo-pilkades.webp" alt="Logo Panitia Pemilihan Kepala Desa Belik">
+      <div class="hero-copy">
+        <span class="badge"><span class="dot"></span> PANITIA PEMILIHAN KEPALA DESA</span>
+        <h1>CEK DPT ONLINE</h1>
+        <p>Desa Belik · Tahun 2026</p>
+      </div>
+    </div>
   </section>
 
   <main class="card">
+    <div style="display:flex;align-items:center;gap:14px;background:#fff8e6;border:1px solid #f6df9d;border-radius:15px;padding:13px 14px;margin-bottom:16px">
+      <img src="maskot-pilkades.webp" alt="Maskot Panitia Pilkades Belik" style="width:58px;height:82px;object-fit:contain;flex:none">
+      <div>
+        <div style="font-size:12px;font-weight:800;color:#8a5a00;text-transform:uppercase;letter-spacing:.4px">Jadwal Pelaksanaan Pilkades</div>
+        <div style="font-size:19px;font-weight:900;color:#14213d;margin-top:3px">Senin, 9 November 2026</div>
+        <div style="font-size:12px;color:#667085;margin-top:3px">Pemilihan Kepala Desa Belik Tahun 2026</div>
+      </div>
+    </div>
     <div class="search-title">🔎 Cari Data Pemilih</div>
     <div class="search">
       <input id="nama" type="search" placeholder="Ketik nama lengkap..." autocomplete="off" aria-label="Nama lengkap">
