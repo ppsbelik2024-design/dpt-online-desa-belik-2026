@@ -4,54 +4,116 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <title>Cek DPT Online | Desa Belik 2026</title>
-<meta name="description" content="Layanan pengecekan data pemilih Desa Belik untuk Pemilihan Kepala Desa Tahun 2026 berdasarkan nama lengkap.">
-<meta name="theme-color" content="#0b3b82">
-<meta property="og:title" content="CEK DPT ONLINE - Desa Belik 2026">
-<meta property="og:description" content="Cek data pemilih Desa Belik untuk Pemilihan Kepala Desa Tahun 2026.">
+<meta name="description" content="Cek data pemilih Desa Belik untuk Pemilihan Kepala Desa Tahun 2026 berdasarkan nama lengkap.">
+<meta name="theme-color" content="#0a2f6b">
+<meta property="og:title" content="CEK DPT ONLINE — DESA BELIK 2026">
+<meta property="og:description" content="Cek nama pemilih, catat TPS, dan gunakan hak pilih Anda.">
 <style>
-*{box-sizing:border-box}
-:root{--blue:#0b3b82;--blue2:#1769c2;--gold:#f2c14e;--ink:#14213d;--muted:#667085;--line:#e4e7ec;--soft:#f4f7fb;--white:#fff}
-html{scroll-behavior:smooth}
-body{margin:0;font-family:Inter,ui-sans-serif,system-ui,-apple-system,"Segoe UI",Arial,sans-serif;background:linear-gradient(180deg,#eef5ff 0,#f7f9fc 360px,var(--soft) 100%);color:var(--ink)}
-.wrap{max-width:760px;margin:0 auto;padding:20px 14px 44px}
-.hero{position:relative;overflow:hidden;background:linear-gradient(135deg,var(--blue),#1259a8);color:#fff;border-radius:24px;padding:28px 22px 24px;box-shadow:0 16px 38px rgba(11,59,130,.20)}
-.hero:after{content:"";position:absolute;width:180px;height:180px;border-radius:50%;right:-75px;top:-80px;background:rgba(255,255,255,.08)}
-.badge{display:inline-flex;align-items:center;gap:7px;background:rgba(255,255,255,.14);border:1px solid rgba(255,255,255,.2);border-radius:999px;padding:7px 12px;font-size:11px;font-weight:800;letter-spacing:.4px}
-.dot{width:7px;height:7px;border-radius:50%;background:var(--gold)}
-.hero-top{display:flex;align-items:center;gap:18px;position:relative;z-index:1}.hero-logo{width:78px;height:78px;object-fit:contain;background:#fff;border-radius:16px;padding:5px;flex:none}.hero-copy{min-width:0}.hero h1{font-size:30px;line-height:1.12;margin:16px 0 7px;letter-spacing:-.5px}.hero p{margin:0;color:#dbeafe;font-size:14px;line-height:1.6}
-.card{background:var(--white);border:1px solid rgba(16,24,40,.06);border-radius:20px;box-shadow:0 10px 30px rgba(16,24,40,.07);padding:20px;margin-top:16px}
-.search-title{font-weight:800;font-size:16px;margin-bottom:10px}.search{display:flex;gap:9px}
-input{flex:1;min-width:0;height:52px;padding:0 15px;border:1px solid #cfd6e1;border-radius:13px;font-size:16px;outline:none;background:#fff;color:var(--ink)}input:focus{border-color:var(--blue2);box-shadow:0 0 0 4px rgba(23,105,194,.11)}
-.btn{height:52px;border:0;border-radius:13px;padding:0 19px;background:var(--blue);color:#fff;font-size:15px;font-weight:800;cursor:pointer}.btn:hover{filter:brightness(.95)}.btn.secondary{background:#edf3fb;color:var(--blue)}
-.actions{display:flex;gap:9px;margin-top:10px}.hint{font-size:12px;color:var(--muted);margin:10px 2px 0;line-height:1.5}
-.status{display:flex;justify-content:space-between;align-items:center;gap:10px;font-size:13px;color:#475467;margin:18px 0 10px}.count{font-weight:800;color:var(--blue)}
-.result{border:1px solid var(--line);border-radius:16px;padding:16px;margin-top:11px;background:#fff}.name{font-size:18px;font-weight:850;margin-bottom:12px;text-transform:uppercase}
-.grid{display:grid;grid-template-columns:1fr 1fr;gap:9px}.item{background:#f7f9fc;border-radius:11px;padding:10px 11px}.label{font-size:10px;color:#667085;text-transform:uppercase;font-weight:800;letter-spacing:.4px}.value{margin-top:4px;font-weight:750;font-size:14px}
-.empty{text-align:center;padding:25px 10px;color:var(--muted);line-height:1.6}.info{margin-top:16px;padding:14px 15px;border-radius:14px;background:#f8fafc;border:1px solid #eaecf0;font-size:12px;color:#475467;line-height:1.6}.info b{color:var(--ink)}.footer{text-align:center;color:#98a2b3;font-size:11px;line-height:1.6;margin-top:18px}
-.countdown{margin:0 0 16px;padding:16px;border-radius:16px;background:linear-gradient(135deg,#0b3b82,#1769aa);color:#fff;text-align:center}.countdown-title{font-size:12px;font-weight:800;letter-spacing:.8px;text-transform:uppercase;opacity:.9}.countdown-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:8px;margin-top:11px}.count-box{background:rgba(255,255,255,.13);border:1px solid rgba(255,255,255,.2);border-radius:12px;padding:10px 5px}.count-num{font-size:25px;font-weight:900;line-height:1}.count-label{font-size:10px;margin-top:5px;opacity:.85;text-transform:uppercase}.countdown.done{background:#177245}.countdown-note{font-size:11px;margin-top:9px;opacity:.9}
-.info-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:12px;margin-top:16px}.info-card{border:1px solid #e7eaf0;border-radius:15px;padding:15px;background:#fff}.info-icon{font-size:24px;margin-bottom:6px}.info-card h3{margin:0 0 5px;font-size:14px;color:#14213d}.info-card p{margin:0;font-size:12px;line-height:1.55;color:#667085}.cta{margin-top:16px;border-radius:16px;padding:17px;text-align:center;background:#f1f7ff;border:1px solid #cfe3ff}.cta strong{display:block;font-size:18px;color:#0b3b82}.cta span{display:block;margin-top:5px;font-size:12px;color:#667085}
-@media(max-width:560px){.hero-top{gap:12px}.hero-logo{width:64px;height:64px}.hero h1{font-size:23px}.wrap{padding:12px 10px 34px}.hero{border-radius:20px;padding:24px 18px}.hero h1{font-size:25px}.card{padding:17px;border-radius:17px}.search{flex-direction:column}.btn{width:100%}.actions .btn{flex:1}.grid{grid-template-columns:1fr 1fr}.count-num{font-size:21px}.countdown{padding:14px 10px}.info-grid{grid-template-columns:1fr}}
-@media(max-width:370px){.grid{grid-template-columns:1fr}}
+*{box-sizing:border-box}html{scroll-behavior:smooth}
+:root{--navy:#082a60;--blue:#0b4da2;--blue2:#1677d2;--gold:#f4c542;--gold2:#ffe28a;--ink:#10213f;--muted:#667085;--line:#e6eaf0;--bg:#f4f7fc;--white:#fff}
+body{margin:0;font-family:Inter,ui-sans-serif,system-ui,-apple-system,"Segoe UI",Arial,sans-serif;color:var(--ink);background:radial-gradient(circle at 20% 0,#e5f0ff 0,transparent 32%),linear-gradient(180deg,#edf5ff 0,#f7f9fc 420px,var(--bg) 100%)}
+.wrap{max-width:820px;margin:auto;padding:14px 14px 45px}
+.hero{position:relative;overflow:hidden;border-radius:28px;background:linear-gradient(135deg,var(--navy) 0%,#0b4da2 58%,#1978d4 100%);color:white;padding:25px 24px 22px;box-shadow:0 20px 50px rgba(8,42,96,.25)}
+.hero:before,.hero:after{content:"";position:absolute;border-radius:50%;pointer-events:none}.hero:before{width:230px;height:230px;right:-90px;top:-120px;background:rgba(244,197,66,.14)}.hero:after{width:180px;height:180px;left:-120px;bottom:-130px;border:28px solid rgba(255,255,255,.06)}
+.hero-top{display:flex;align-items:center;gap:17px;position:relative;z-index:2}.hero-logo{width:82px;height:82px;object-fit:contain;background:#fff;border-radius:18px;padding:5px;box-shadow:0 8px 22px rgba(0,0,0,.18);flex:none}
+.hero-copy{min-width:0}.badge{display:inline-flex;align-items:center;gap:7px;border:1px solid rgba(255,255,255,.25);background:rgba(255,255,255,.12);border-radius:999px;padding:6px 10px;font-size:10px;font-weight:900;letter-spacing:.5px}.dot{width:7px;height:7px;border-radius:50%;background:var(--gold)}
+.hero h1{font-size:30px;line-height:1.05;margin:11px 0 6px;letter-spacing:-.7px}.hero h1 span{color:var(--gold2)}.hero p{margin:0;color:#dbeafe;font-size:13px;line-height:1.5}
+.hero-tag{position:relative;z-index:2;margin-top:18px;padding-top:15px;border-top:1px solid rgba(255,255,255,.16);font-size:14px;font-weight:800}.hero-tag b{color:var(--gold2)}
+.card{background:#fff;border:1px solid rgba(16,24,40,.06);border-radius:22px;box-shadow:0 12px 35px rgba(16,24,40,.08);padding:20px;margin-top:16px}
+.countdown{padding:17px;border-radius:18px;background:linear-gradient(135deg,#082a60,#1267bd);color:#fff;text-align:center;box-shadow:inset 0 1px rgba(255,255,255,.12)}.countdown-title{font-size:12px;font-weight:900;letter-spacing:.8px;text-transform:uppercase}.countdown-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:8px;margin-top:12px}.count-box{background:rgba(255,255,255,.12);border:1px solid rgba(255,255,255,.18);border-radius:13px;padding:10px 4px}.count-num{font-size:26px;font-weight:950;line-height:1}.count-label{font-size:9px;margin-top:5px;opacity:.85;text-transform:uppercase;font-weight:800}.countdown-note{font-size:11px;margin-top:9px;opacity:.9}.countdown.done{background:#087443}
+.schedule{display:flex;align-items:center;gap:14px;margin:15px 0;padding:14px;border-radius:17px;background:linear-gradient(135deg,#fff9e9,#fffdf7);border:1px solid #f1d98b}.mascot{width:86px;height:105px;object-fit:contain;flex:none;animation:float 3.5s ease-in-out infinite}@keyframes float{0%,100%{transform:translateY(0)}50%{transform:translateY(-5px)}}.schedule-kicker{font-size:10px;color:#8a5a00;text-transform:uppercase;font-weight:900;letter-spacing:.5px}.schedule-date{font-size:20px;font-weight:950;margin-top:3px}.schedule-sub{font-size:12px;color:#667085;margin-top:4px}
+.notice{margin-top:15px;padding:17px;border-radius:17px;background:linear-gradient(135deg,#f0f7ff,#f8fbff);border:1px solid #cfe3ff}.notice-title{font-size:18px;font-weight:950;color:var(--navy)}.notice-text{font-size:12px;color:#667085;line-height:1.6;margin-top:4px}
+.search-title{font-size:18px;font-weight:950;margin-top:18px}.search-sub{font-size:12px;color:var(--muted);margin:4px 0 11px}.search{display:flex;gap:9px}input{flex:1;min-width:0;height:52px;padding:0 15px;border:1px solid #cfd6e1;border-radius:13px;font-size:16px;outline:none;color:var(--ink)}input:focus{border-color:var(--blue2);box-shadow:0 0 0 4px rgba(22,119,210,.11)}.btn{height:52px;border:0;border-radius:13px;padding:0 18px;background:linear-gradient(135deg,var(--blue),var(--blue2));color:#fff;font-size:14px;font-weight:900;cursor:pointer}.btn:hover{filter:brightness(.96)}.actions{display:flex;gap:9px;margin-top:10px}.btn.secondary{background:#edf4fd;color:var(--blue);border:1px solid #d5e5fa}.btn.gold{background:linear-gradient(135deg,#e3aa19,#f4c542);color:#172033}
+.hint{font-size:11px;color:var(--muted);margin:9px 2px 0;line-height:1.5}.status{display:flex;justify-content:space-between;gap:10px;font-size:12px;color:#475467;margin:18px 0 10px}.count{font-weight:900;color:var(--blue)}
+.result{border:1px solid var(--line);border-radius:16px;padding:16px;margin-top:11px;background:#fff}.name{font-size:17px;font-weight:950;margin-bottom:12px;text-transform:uppercase}.grid{display:grid;grid-template-columns:1fr 1fr;gap:9px}.item{background:#f7f9fc;border-radius:11px;padding:10px 11px}.label{font-size:9px;color:#667085;text-transform:uppercase;font-weight:900;letter-spacing:.4px}.value{margin-top:4px;font-weight:800;font-size:14px}.empty{text-align:center;padding:25px 10px;color:var(--muted);line-height:1.6}
+.cta{margin-top:16px;padding:18px;border-radius:18px;text-align:center;background:linear-gradient(135deg,#fff8dc,#fffdf4);border:1px solid #f0d77d}.cta strong{display:block;font-size:18px;color:#765000}.cta span{display:block;margin-top:5px;font-size:12px;line-height:1.5;color:#667085}.share{margin-top:11px;width:100%}
+.info{margin-top:16px;padding:14px 15px;border-radius:14px;background:#f8fafc;border:1px solid #eaecf0;font-size:11px;color:#475467;line-height:1.6}.info b{color:var(--ink)}.footer{text-align:center;color:#98a2b3;font-size:10px;line-height:1.6;margin-top:18px}
+@media(max-width:560px){.wrap{padding:10px 9px 34px}.hero{border-radius:21px;padding:22px 17px 19px}.hero-top{gap:11px}.hero-logo{width:65px;height:65px}.hero h1{font-size:24px}.hero-tag{font-size:12px}.card{padding:16px;border-radius:18px}.search{flex-direction:column}.search .btn{width:100%}.actions .btn{flex:1}.mascot{width:72px;height:94px}.schedule-date{font-size:17px}.count-num{font-size:21px}.grid{grid-template-columns:1fr 1fr}}
+@media(max-width:370px){.grid{grid-template-columns:1fr}.hero h1{font-size:21px}}
 </style>
 </head>
 <body>
 <div class="wrap">
-<section class="hero"><div class="hero-top"><img class="hero-logo" src="logo-pilkades.webp" alt="Logo Panitia Pemilihan Kepala Desa Belik"><div class="hero-copy"><span class="badge"><span class="dot"></span> PANITIA PEMILIHAN KEPALA DESA</span><h1>CEK DPT ONLINE</h1><p>Desa Belik · Tahun 2026</p></div></div></section>
+<section class="hero">
+ <div class="hero-top">
+  <img class="hero-logo" src="logo-pilkades.webp" alt="Logo Panitia Pemilihan Kepala Desa Belik">
+  <div class="hero-copy">
+   <span class="badge"><span class="dot"></span>PANITIA PEMILIHAN KEPALA DESA</span>
+   <h1>PEMILIHAN KEPALA DESA <span>BELIK</span></h1>
+   <p>CEK DPT ONLINE · TAHUN 2026</p>
+  </div>
+ </div>
+ <div class="hero-tag">“<b>Satu Suara Menentukan Masa Depan Desa Belik</b>”</div>
+</section>
+
 <main class="card">
-<div class="countdown" id="countdown" aria-live="polite"><div class="countdown-title">⏳ Menuju Hari H Pilkades Desa Belik</div><div class="countdown-grid"><div class="count-box"><div class="count-num" id="cd-days">0</div><div class="count-label">Hari</div></div><div class="count-box"><div class="count-num" id="cd-hours">00</div><div class="count-label">Jam</div></div><div class="count-box"><div class="count-num" id="cd-minutes">00</div><div class="count-label">Menit</div></div><div class="count-box"><div class="count-num" id="cd-seconds">00</div><div class="count-label">Detik</div></div></div><div class="countdown-note">Senin, 9 November 2026</div></div>
-<div style="display:flex;align-items:center;gap:14px;background:#fff8e6;border:1px solid #f6df9d;border-radius:15px;padding:13px 14px;margin-bottom:16px"><img src="maskot-pilkades-baru.png.png" alt="Maskot Lik Sura Panitia Pilkades Belik" style="width:72px;height:90px;object-fit:contain;flex:none"><div><div style="font-size:12px;font-weight:800;color:#8a5a00;text-transform:uppercase;letter-spacing:.4px">Jadwal Pelaksanaan Pilkades</div><div style="font-size:19px;font-weight:900;color:#14213d;margin-top:3px">Senin, 9 November 2026</div><div style="font-size:12px;color:#667085;margin-top:3px">Pemilihan Kepala Desa Belik Tahun 2026</div></div></div>
-<div class="search-title">🔎 Cari Data Pemilih</div><div class="search"><input id="nama" type="search" placeholder="Ketik nama lengkap..." autocomplete="off" aria-label="Nama lengkap"><button class="btn" onclick="cari()">CARI DATA</button></div><div class="actions"><button class="btn secondary" onclick="resetCari()">RESET PENCARIAN</button></div><div class="hint">Masukkan minimal 2 huruf nama. Hasil pencarian akan menampilkan data yang sesuai.</div>
-<div id="status" class="status" aria-live="polite"></div><div id="hasil"></div>
-<div class="info"><b>ℹ️ Informasi:</b><br>Layanan ini digunakan untuk membantu warga mengecek data pemilih Desa Belik pada Pemilihan Kepala Desa Tahun 2026. Data sensitif seperti NIK dan tanggal lahir tidak ditampilkan pada halaman ini.</div>
+ <div class="countdown" id="countdown" aria-live="polite">
+  <div class="countdown-title">⏳ Menuju Hari H Pilkades Desa Belik</div>
+  <div class="countdown-grid">
+   <div class="count-box"><div class="count-num" id="cd-days">0</div><div class="count-label">Hari</div></div>
+   <div class="count-box"><div class="count-num" id="cd-hours">00</div><div class="count-label">Jam</div></div>
+   <div class="count-box"><div class="count-num" id="cd-minutes">00</div><div class="count-label">Menit</div></div>
+   <div class="count-box"><div class="count-num" id="cd-seconds">00</div><div class="count-label">Detik</div></div>
+  </div>
+  <div class="countdown-note">Senin, 9 November 2026</div>
+ </div>
+
+ <div class="schedule">
+  <img class="mascot" src="maskot-pilkades-baru.png" alt="Maskot Lik Sura Panitia Pilkades Belik">
+  <div><div class="schedule-kicker">📅 Jadwal Pelaksanaan Pilkades</div><div class="schedule-date">Senin, 9 November 2026</div><div class="schedule-sub">Pemilihan Kepala Desa Belik Tahun 2026</div></div>
+ </div>
+
+ <div class="notice">
+  <div class="notice-title">🗳️ SUDAH TERDAFTAR SEBAGAI PEMILIH?</div>
+  <div class="notice-text">Yuk cek nama Anda sekarang! Catat nomor TPS Anda dan jangan sampai lupa hadir pada Hari H.</div>
+ </div>
+
+ <div class="search-title">🔎 Cari Data Pemilih</div>
+ <div class="search-sub">Masukkan nama lengkap untuk melihat TPS dan informasi lokasi pemilihan.</div>
+ <div class="search">
+  <input id="nama" type="search" placeholder="Masukkan Nama Lengkap Anda..." autocomplete="off" aria-label="Nama lengkap">
+  <button class="btn" onclick="cari()">🔍 CEK DATA PEMILIH</button>
+ </div>
+ <div class="actions"><button class="btn secondary" onclick="resetCari()">RESET PENCARIAN</button></div>
+ <div class="hint">Minimal 2 huruf. Jika nama cukup umum, ketik nama lebih lengkap agar hasil lebih spesifik.</div>
+ <div id="status" class="status" aria-live="polite"></div><div id="hasil"></div>
+
+ <div class="cta">
+  <strong>AYO GUNAKAN HAK PILIH ANDA! 🗳️</strong>
+  <span>Cek nama · Catat TPS · Hadir pada Hari H<br><b>SUARA ANDA, PILIHAN ANDA, MASA DEPAN BELIK KITA BERSAMA.</b></span>
+ </div>
+ <button class="btn gold share" onclick="bagikan()">📲 BAGIKAN WEBSITE KE WHATSAPP</button>
+
+ <div class="info"><b>ℹ️ Informasi:</b><br>Layanan ini digunakan untuk membantu warga mengecek data pemilih Desa Belik pada Pemilihan Kepala Desa Tahun 2026. Data sensitif seperti NIK dan tanggal lahir tidak ditampilkan pada halaman ini.</div>
 </main>
-<div class="footer">Data pemilih merupakan data yang digunakan untuk keperluan pengecekan informasi pemilih.<br>© 2026 Panitia Pemilihan Kepala Desa Belik</div>
+<div class="footer">Data pemilih ditampilkan untuk keperluan pengecekan informasi pemilih.<br>© 2026 Panitia Pemilihan Kepala Desa Belik</div>
 </div>
+
 <script src="data.js"></script>
 <script>
 const input=document.getElementById("nama"),hasil=document.getElementById("hasil"),statusEl=document.getElementById("status");
 function esc(v){return String(v??"").replace(/[&<>"']/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#039;"}[c]))}
-function cari(){const q=input.value.trim().toUpperCase();hasil.innerHTML="";if(q.length<2){statusEl.innerHTML='<span>Silakan masukkan minimal 2 huruf nama.</span>';return}const matches=DPT_DATA.filter(x=>String(x.nama??"").toUpperCase().includes(q));statusEl.innerHTML=matches.length?'<span>Hasil pencarian</span><span class="count">'+matches.length+' data ditemukan</span>':'<span>Hasil pencarian</span>';if(!matches.length){hasil.innerHTML='<div class="empty">Nama tidak ditemukan dalam data yang tersedia.<br>Periksa kembali ejaan nama yang dimasukkan.</div>';return}hasil.innerHTML=matches.slice(0,50).map(x=>'<div class="result"><div class="name">'+esc(x.nama)+'</div><div class="grid"><div class="item"><div class="label">TPS</div><div class="value">'+(esc(x.tps)||"-")+'</div></div><div class="item"><div class="label">Dusun</div><div class="value">'+(esc(x.dusun)||"-")+'</div></div><div class="item"><div class="label">RT</div><div class="value">'+(esc(x.rt)||"-")+'</div></div><div class="item"><div class="label">RW</div><div class="value">'+(esc(x.rw)||"-")+'</div></div></div></div>').join("");if(matches.length>50)hasil.innerHTML+='<div class="hint">Menampilkan 50 hasil pertama. Ketik nama lebih lengkap agar hasil lebih spesifik.</div>'}
-function resetCari(){input.value="";hasil.innerHTML="";statusEl.innerHTML="";input.focus()} input.addEventListener("keydown",e=>{if(e.key==="Enter")cari()});
-(function(){const target=new Date('2026-11-09T00:00:00+07:00').getTime(),box=document.getElementById('countdown'),d=document.getElementById('cd-days'),hh=document.getElementById('cd-hours'),m=document.getElementById('cd-minutes'),s=document.getElementById('cd-seconds');function tick(){const diff=target-Date.now();if(diff<=0){box.classList.add('done');box.querySelector('.countdown-title').textContent='🎉 HARI H PELAKSANAAN PILKADES';box.querySelector('.countdown-grid').innerHTML='<div style="grid-column:1/-1;font-size:22px;font-weight:900;padding:7px">Senin, 9 November 2026</div>';return}d.textContent=Math.floor(diff/86400000);hh.textContent=String(Math.floor(diff/3600000)%24).padStart(2,'0');m.textContent=String(Math.floor(diff/60000)%60).padStart(2,'0');s.textContent=String(Math.floor(diff/1000)%60).padStart(2,'0')}tick();setInterval(tick,1000)})();
+function cari(){
+ const q=input.value.trim().toUpperCase();hasil.innerHTML="";
+ if(q.length<2){statusEl.innerHTML="<span>Silakan masukkan minimal 2 huruf nama.</span>";return}
+ const matches=DPT_DATA.filter(x=>String(x.nama??"").toUpperCase().includes(q));
+ statusEl.innerHTML=matches.length?'<span>Hasil pencarian</span><span class="count">'+matches.length+' data ditemukan</span>':'<span>Hasil pencarian</span>';
+ if(!matches.length){hasil.innerHTML='<div class="empty">Nama tidak ditemukan dalam data yang tersedia.<br>Periksa kembali ejaan nama yang dimasukkan.</div>';return}
+ hasil.innerHTML=matches.slice(0,50).map(x=>'<div class="result"><div class="name">'+esc(x.nama)+'</div><div class="grid"><div class="item"><div class="label">TPS</div><div class="value">'+(esc(x.tps)||"-")+'</div></div><div class="item"><div class="label">Dusun</div><div class="value">'+(esc(x.dusun)||"-")+'</div></div><div class="item"><div class="label">RT</div><div class="value">'+(esc(x.rt)||"-")+'</div></div><div class="item"><div class="label">RW</div><div class="value">'+(esc(x.rw)||"-")+'</div></div></div></div>').join("");
+ if(matches.length>50)hasil.innerHTML+='<div class="hint">Menampilkan 50 hasil pertama. Ketik nama lebih lengkap agar hasil lebih spesifik.</div>'
+}
+function resetCari(){input.value="";hasil.innerHTML="";statusEl.innerHTML="";input.focus()}
+function bagikan(){
+ const url=window.location.href;
+ const text="Cek DPT Online Desa Belik 2026 🗳️\nCek nama Anda, catat nomor TPS, dan gunakan hak pilih Anda.\n"+url;
+ window.open("https://wa.me/?text="+encodeURIComponent(text),"_blank");
+}
+input.addEventListener("keydown",e=>{if(e.key==="Enter")cari()});
+(function(){
+ const target=new Date("2026-11-09T00:00:00+07:00").getTime(),box=document.getElementById("countdown"),d=document.getElementById("cd-days"),hh=document.getElementById("cd-hours"),m=document.getElementById("cd-minutes"),s=document.getElementById("cd-seconds");
+ function tick(){const diff=target-Date.now();if(diff<=0){box.classList.add("done");box.querySelector(".countdown-title").textContent="🎉 HARI H PELAKSANAAN PILKADES";box.querySelector(".countdown-grid").innerHTML='<div style="grid-column:1/-1;font-size:22px;font-weight:900;padding:7px">Senin, 9 November 2026</div>';return}d.textContent=Math.floor(diff/86400000);hh.textContent=String(Math.floor(diff/3600000)%24).padStart(2,"0");m.textContent=String(Math.floor(diff/60000)%60).padStart(2,"0");s.textContent=String(Math.floor(diff/1000)%60).padStart(2,"0")}
+ tick();setInterval(tick,1000)
+})();
 </script>
-</body></html>
+</body>
+</html>
